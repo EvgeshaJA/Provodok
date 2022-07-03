@@ -13,7 +13,6 @@ import { tabs } from "./modules/tabs";
 import { form } from "./modules/form";
 import { tel } from "./modules/tel";
 import { slider } from "./modules/slider";
-import { numbers } from "./modules/numbers";
 import { navigation } from "./modules/navigation";
 
 

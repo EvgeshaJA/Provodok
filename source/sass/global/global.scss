@@ -31,6 +31,12 @@ a {
   text-decoration: none;
   color: $Black;
   font-family: $Ub;
+  transition: 0.5s ease;
+  &:hover,
+  &:active{
+    color: $Orange;
+  }
+
 }
 
 
@@ -106,31 +112,19 @@ h2{
   line-height: 120%;
   color: $Black;
   font-family: $Ub;
-  position: relative;
   max-width: fit-content;
 
-  &::after{
-    content: url(../img/arrow-main.svg);
-    position: absolute;
-    width: 36px;
-    height: 30px;
-    right: -56px;
-  }
 
   @media (max-width: 992px){
     font-size: clamp(28px, 5vw, 39px);
   }
-  @media (max-width: 450px){
-    &::after{
-      display: none;
-    }
-  }
+
 
 }
 
 h3{
   font-size: 16px;
-  font-weight: 600;
+  font-weight: $Bold;
 }
 input, textarea{
   outline: none;
@@ -144,16 +138,18 @@ input, textarea{
 input:focus, textarea:focus{
   background: #FFFFFF;
 }
-
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
 textarea{
   resize: none;
 }
 
 .container{
-  max-width: 1222px;
+  max-width: 80%;
   margin: 0 auto;
   position: relative;
-  padding: 0 10px;
+  padding: 0 15px;
 }
 
 
