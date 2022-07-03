@@ -10,7 +10,7 @@ Thumbs.db
 
 node_modules/
 build/
-source/
+dev/
 
 stuff/
 todo.*
