@@ -1,0 +1,30 @@
+.button{
+    margin-top: 63px;
+    width: 197px;
+    height: 51px;
+    border-radius: 5px;
+    background: #FDFDFD;
+    position: relative;
+    box-shadow: (0px 0px 50px rgba(0, 0, 0, 0.15));
+
+    .tooltip{
+        right: 32%;
+        
+    }
+    &__btn{
+        font-size: 16px;
+        font-weight: 600;
+        transition: 0.5s ease;
+        span{
+            margin-left: 10px;
+        }
+    }
+    &__btn:hover,
+    &__btn:focus,
+    &__btn:active{
+        color: $Orange;
+        transition: 0.5s ease;
+
+    }
+
+}

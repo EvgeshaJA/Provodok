@@ -1,0 +1,199 @@
+.job{
+    margin-top: 30px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        background: #FFFFFF;
+        box-shadow: 0px 3px 30px #EEEEEE;
+        border-radius: 5px;
+        padding: 25px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .accordion__item.active{
+        .accordion__icon{
+            background-image: url(../img/arrow-up-or.svg);
+            background-size: contain;
+        }
+    }
+    &__cont{
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+    &__cont-title{
+        font-size: 14px;
+        color: #999;
+        margin-bottom: 10px;
+    }
+    &__cont-item{
+        font-size: 14px;
+        color: #263238;
+        padding-left: 10px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: $Orange;
+            border-radius:100%;
+            left: 0;
+            top: 7px;
+
+        }
+    }
+    &__cont-item:last-of-type{
+        margin-bottom: 20px;
+    }
+    &__cont-card:not(:first-of-type){
+        margin-top: 20px;
+    }
+
+    &__form{
+        padding-top: 55px;
+    }
+    &__form-title{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 52px;
+    }
+    &__form-inner{
+        .form__input:not(:last-of-type){
+            margin-bottom: 20px;
+        }
+    }
+    &__form-buttons{
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        .button{
+            margin-top: 0;
+        }
+    }
+
+    .form__input{
+        input{
+            background: transparent;
+        }
+    }
+
+    @media (max-width:1200px) {
+        &__form{
+            padding-left: 35px;
+        }
+    }
+
+    @media (max-width:1032px) {
+        &__form{
+            width: 60%;
+        }
+
+        .form__input{
+            width: 100%;
+        }
+    }
+    @media (max-width:992px){
+        &__inner{
+            flex-direction: column;
+        }
+        &__form{
+            width: 70%;
+            padding-left: 0;
+        }
+
+    }
+    @media (max-width:768px){
+        &__form{
+            width: 80%;
+        }
+        
+    }
+    @media (max-width:576px){
+        &__form{
+            width: 100%;
+            padding-top: 30px;
+        }
+        &__form-title{
+            font-size: 18px;
+        }
+    }
+    @media (max-width:450px){
+        &__form-buttons{
+            flex-direction: column-reverse;
+            margin-top: 0;
+        }
+        .form__file{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.offer{
+    margin-top: 100px;
+    &__inner{
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__image{
+        height: 95px;
+        width: 125px;
+        margin: 0 auto;
+
+    }
+    &__card-title{
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    @media (max-width:992px){
+        margin-top: 60px;
+        &__inner{
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px 30px;
+        }
+    }
+    @media (max-width:830px){
+        &__card{
+            width: 32%;
+
+        }
+        &__inner{
+            justify-content: start;
+            gap: 20px 10px;
+
+        }
+    }
+    @media (max-width:768px){
+        &__card{
+            width: 48%;
+            margin-bottom: 20px;
+        }
+    }
+    @media (max-width:576px){
+        &__card{
+            width: 50%;
+        }
+        &__inner{
+            gap: unset;
+        }
+    }
+    @media (max-width:450px){
+        &__card{
+            width: 100%;
+        }
+        &__inner{
+            margin-top: 40px;
+        }
+    }
+
+
+}
+

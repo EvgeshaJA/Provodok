@@ -1,0 +1,97 @@
+.back{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #1D2237;
+    transition: 0.5s;
+    display: flex;
+    cursor: pointer;
+    
+    svg{
+        fill: black;
+        transition: 0.5s;
+        margin-right: 10px;
+        margin-top: 8px;
+
+
+    }
+
+    &:hover,
+    &:active{
+        color: $Orange;
+
+
+        & svg{
+            fill: $Orange;
+        }
+
+    }
+
+
+}
+
+.article{
+
+    &__header{
+        border-bottom: 1px solid #ccc;
+    }
+
+    &__title{
+        padding-top: 15px;
+        margin-bottom: 10px;
+        font-size: 32px;
+    }
+    &__date{
+        padding-bottom: 10px;
+        font-size: 16px;
+        color: #1D2237;
+        opacity: 0.7;
+    }
+
+    &__content{
+        padding-bottom: 40px;
+        border-bottom: 1px solid #ccc;
+
+
+        h2{
+            &::after{
+                display: none;
+            }
+        }
+    }
+    &__cnt-title{
+        font-size: 18px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+
+
+    }
+    &__cnt:not(:last-of-type){
+        margin-bottom: 40px;
+    }
+
+    &__blog-more{
+        margin-top: 70px;
+        margin-bottom: 15px;
+        color: #1D2237;
+        opacity: 0.7;
+        transition: 0.3s ease;
+        text-align: end;
+        &:hover,
+        &:active{
+            color: $Orange;
+        }
+    }
+
+    &__blog-inner{
+        display: flex;
+        justify-content: space-between;
+        gap: 0 30px;
+    }
+
+    @media (max-width:576px) {
+        &__blog-card:not(:first-of-type){
+            display: none;
+        }
+    }
+
+}

@@ -1,0 +1,31 @@
+.accordion {  
+
+  &__title{
+    display: flex;
+    align-items:center;
+  }
+    &__icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/arrow-up.svg);
+    background-repeat: no-repeat;
+    transform: rotate(-180deg);
+    transition: all .4s ease-in-out;
+  }
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .6s ease-in-out;
+  }
+
+  .active &__content {
+    max-height: fit-content;
+    padding-top: 15px;
+    overflow: visible;
+  }
+  .active &__icon {
+    transform: rotate(0deg);
+  }
+
+}

@@ -1,0 +1,120 @@
+.hero2{
+    height: 300px;
+    background-image: url(../img/hero2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width:1200px) {
+        background-position: center top;
+    }
+    @media (max-width:450px) {
+        height: 250px;
+    }
+}
+
+
+
+.breadcrumbs{
+    padding-top: 168px;
+    h2::after{
+        display: none;
+    }
+    &__title{
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #fff;
+
+    }
+    &__list{
+        display: flex;
+    }
+    &__item{
+        font-size: 14px;
+        font-weight: 300;
+        opacity: 0.9;
+        color: #fff;
+        padding-right: 10px;
+        margin-right: 5px;
+        position: relative;
+        &:not(:last-of-type)::after{
+            content: '/';
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0px;
+            font-size: 13px;
+        }
+    }
+}
+
+.blog-bts{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    cursor: pointer;
+    &__button{
+        width: 220px;
+        height: 50px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: 0.5s ease;
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
+        &:hover,
+        &:active,
+        &:focus,
+        &:active{
+            color: $Orange;
+
+        }
+
+    }
+
+    &__button--active{
+        color: $Orange;
+        transition: 0.5s ease;
+    }
+
+    @media (max-width:1200px) {
+        justify-content: center;
+        gap: 20px;
+    }
+
+}
+
+.articles{
+    margin-top: 100px;
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px 0;
+
+        &.hidden{
+            display: none;
+        }
+
+    }
+    &__item{
+        width: 32%;
+    }
+
+    @media (max-width:992px) {
+
+        &__item{
+            width: 48%;
+        }
+       
+    }
+
+    @media (max-width:576px) {
+
+        margin-top: 60px;
+
+        &__item{
+            width: 100%;
+        }
+       
+    }
+
+}
