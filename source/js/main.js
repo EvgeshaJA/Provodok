@@ -14,12 +14,7 @@ import { form } from "./modules/form";
 import { tel } from "./modules/tel";
 import { slider } from "./modules/slider";
 import { navigation } from "./modules/navigation";
-
-
-
-
-
-
+import { header } from "./modules/header";
 
 
 
@@ -29,5 +24,6 @@ tabs();
 form();
 tel();
 slider();
-numbers();
 navigation();
+header();
+

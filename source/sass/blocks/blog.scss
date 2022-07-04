@@ -64,14 +64,14 @@
         &:active,
         &:focus,
         &:active{
-            color: $Orange;
+            color: $Yellow;
 
         }
 
     }
 
     &__button--active{
-        color: $Orange;
+        color: $Yellow;
         transition: 0.5s ease;
     }
 

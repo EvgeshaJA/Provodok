@@ -34,7 +34,7 @@ a {
   transition: 0.5s ease;
   &:hover,
   &:active{
-    color: $Orange;
+    color: $Yellow;
   }
 
 }
@@ -47,10 +47,10 @@ body {
   font-size: 16px;
   line-height: 150%;
   font-weight: $Normal;
-  color: $Black;
+  color: $Lite-gray;
   display: flex;
   flex-direction: column;
-  background: #FAFBFC;
+  background: $White;
   overflow-x: hidden;
 }
 
@@ -82,7 +82,7 @@ main {
 p, li, a, span, label{
   font-size: 16px;
   line-height: 150%;
-  color: $Black;
+  color: $Dark-gray;
   font-family: $Ub;
   @media (max-width: 992px){
     line-height: 140%;
@@ -101,7 +101,7 @@ ol{
 
 
 h1{
-  color: $Black;
+  color: $Dark-gray;
   font-family: $Ub;
 
   line-height: 100%;
@@ -110,7 +110,7 @@ h1{
 h2{
   font-size: 39px;
   line-height: 120%;
-  color: $Black;
+  color: $Dark-gray;
   font-family: $Ub;
   max-width: fit-content;
 

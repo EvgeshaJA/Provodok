@@ -1,143 +1,19 @@
 .footer{
-    background-color: $Dark-gray;
     margin-top: 100px;
+    background-color:$Lite-gray;
     &__inner{
         display: flex;
-
-    }
-    &__content{
-        padding-top: 44px;
-        margin-right: 80px;
-        color: rgba(256, 256, 256, 0.7);
-
-    }
-    &__image{
-        width: 337px;
-        height: 71px;
-    }
-    &__buttons{
-        display: flex;
-        margin-top: 27px;
-        width: 136px;
-        align-items: center;
         justify-content: space-between;
-    }
-    &__btn{
-
-        transition: 0.3s ease;
-        position: relative;
-        cursor: pointer;
-        &:hover,
-        &:active{
-            color: $Orange;
-            text-shadow: 0px 0px 30px rgba(247, 124, 20, 0.5);
-        }
-        &:hover::before{
-            content: '';
-            height: 2px;
-            background: $Orange;
-            display: block;
-            position: absolute;
-            bottom: -5px;
-            animation: header-line 0.3s ease;
-            animation-iteration-count:1;
-            animation-fill-mode: forwards;
-        }
-        &--active{
-            color: $Orange;
-            text-shadow: 0px 0px 30px rgba(247, 124, 20, 0.5);
-            position: relative;
-
-            &::before{
-                content: '';
-                height: 2px;
-                background: $Orange;
-                display: block;
-                position: absolute;
-                bottom: -5px;
-                animation: header-line 0.3s ease;
-                animation-iteration-count:1;
-                animation-fill-mode: forwards;
-    
-            }
-        }
-
-
+        align-items: center;
+        padding: 40px 0 40px 0;
     }
 
-    &__lists{
-        margin-top: 48px;
-        display: flex;
-
-    }
-    &__list:last-of-type{
-        margin-left: 50px;
-    }
-    &__item{
-        margin-bottom: 5px;
-    }
-    &__link{
-        color: rgba(256, 256, 256, 0.7);
-        &:hover{
-            color: #fff;
-        }
-
+    &__image{
+        width: 10%;
     }
     &__right{
-        margin-top: 48px;
-        font-size: 14px;
+        color: $White;
     }
-    &__map{
-        width: 66.7%;
-
-    }
-    &__map-inner{
-        iframe{
-            width: 100%;
-        }
-    }
-
-    
-
     
 }
 
-.map-color {
-	filter: invert(100%);
-	-ms-filter: invert(100%);
-	-webkit-filter: invert(100%);
-	-moz-filter: invert(100%);
-	-o-filter: invert(100%);
-}
-
-
-@media (max-width:992px){
-    .footer{
-        &__content{
-            margin-right: 40px;
-        }
-    }
-}
-
-@media (max-width:768px){
-    .footer{
-        &__inner{
-         flex-direction: column-reverse;
-         justify-content: center;
-        }
-        &__map{
-            width: 100%;
-        }
-        &__content{
-            margin-right: 0;
-
-        }
-    }
-}
-@media (max-width:450px){
-    .footer{
-        &__image{
-            width: 80%;
-        }
-    }
-}

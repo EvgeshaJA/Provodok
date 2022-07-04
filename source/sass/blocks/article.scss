@@ -17,11 +17,11 @@
 
     &:hover,
     &:active{
-        color: $Orange;
+        color: $Yellow;
 
 
         & svg{
-            fill: $Orange;
+            fill: $Yellow;
         }
 
     }
@@ -78,7 +78,7 @@
         text-align: end;
         &:hover,
         &:active{
-            color: $Orange;
+            color: $Yellow;
         }
     }
 
