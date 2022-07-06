@@ -8,11 +8,39 @@
         padding: 40px 0 40px 0;
     }
 
-    &__image{
-        width: 10%;
-    }
+
     &__right{
         color: $White;
+    }
+
+
+    @media (max-width:768px) {
+        margin-top: 60px;
+        &__image{
+            height: 60px;
+            img{
+                height: 60px;
+            }
+        }
+        &__inner{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        &__right{
+            margin-left: 20px;
+
+        }
+    }
+
+    @media (max-width:576px){
+        &__inner{
+            flex-direction: column;
+        }
+        &__right{
+            margin-top: 20px;
+            text-align: center;
+
+        }
     }
     
 }

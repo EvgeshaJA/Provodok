@@ -1,36 +1,7 @@
-.back{
-    margin-top: 20px;
-    margin-bottom: 40px;
-    color: #1D2237;
-    transition: 0.5s;
-    display: flex;
-    cursor: pointer;
-    
-    svg{
-        fill: black;
-        transition: 0.5s;
-        margin-right: 10px;
-        margin-top: 8px;
-
-
-    }
-
-    &:hover,
-    &:active{
-        color: $Yellow;
-
-
-        & svg{
-            fill: $Yellow;
-        }
-
-    }
-
-
-}
 
 .article{
 
+    margin-top: 100px;
     &__header{
         border-bottom: 1px solid #ccc;
     }
@@ -87,10 +58,28 @@
         justify-content: space-between;
         gap: 0 30px;
     }
+    &__image--several{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        img{
+            display: block;
+            width: 49%;
+        }
+    }
 
+    @media (max-width:768px){
+        margin-top: 60px;
+    }
     @media (max-width:576px) {
         &__blog-card:not(:first-of-type){
             display: none;
+        }
+
+    }
+    @media (max-width:450px){
+        &__title{
+            font-size: 27px;
         }
     }
 

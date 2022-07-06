@@ -3,14 +3,14 @@ export function header() {
 
     let catalogOpen = document.querySelector('.catalog');
     let menu = document.querySelector('.header__menu');
-    let hero = document.querySelector('.hero');
+    let hero = document.querySelector('.hero--scroll');
     let numbLinks = document.querySelectorAll('.header__numbers-link');
     let search = document.querySelector('.header__search');
     let hiddenMenu = document.querySelector('.header__hidden');
 
-    const burger = document.querySelector('.header__button');
-    const menuMob = document.querySelector('.header__navigation');
+    const burger = document.querySelector('.hamburger-wrapper');
     const burgerAct = document.querySelector('.hamburger');
+    const burgSpan = document.querySelector('.hamburger-inner');
 
 
 
@@ -21,12 +21,14 @@ export function header() {
     };
 
     function scrollFunction() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+         if (matchMedia("(max-width: 768px)").matches) {
+            hiddenMenu.style.display = "block";
+              
+        } 
+
+        else if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             hiddenMenu.style.display = "none";
 
-        } else if (matchMedia("(max-width: 768px)").matches) {
-            hiddenMenu.style.display = "none";
-              
         }
          else {
             hiddenMenu.style.display = "block";
@@ -36,12 +38,15 @@ export function header() {
             numbLinks.forEach(link => {
                 link.classList.add('header__numbers-link--active');
                 search.style.border = '1px solid rgba(41, 41, 41, 0.3)';
+                burgSpan.style.backgroundColor = '#333';
 
             });
 
         } else {
             numbLinks.forEach(link => {
                 link.classList.remove('header__numbers-link--active');
+                burgSpan.style.backgroundColor = '#fff';
+
             });
             search.style.border = 'none';
 
@@ -54,28 +59,29 @@ export function header() {
 
     catalogOpen.addEventListener('click', event => {
         event.preventDefault();
-        menuMob.classList.toggle('header__menu--active');
+        menu.classList.toggle('header__menu--active');
     });
 
     document.addEventListener('click', (event) => {
         if(!(event.target.closest('.catalog') || event.target.closest('.header__menu-inner'))) { 
-            menuMob.classList.remove('header__menu--active');
+            menu.classList.remove('header__menu--active');
         }
+
+        if(!(event.target.closest('.hamburger-wrapper') || event.target.closest('.header__hidden'))) { 
+            hiddenMenu.classList.remove('header__hidden--active');
+        }
+
     });
 
 
 
     burger.addEventListener('click', event => {
         event.preventDefault();
-        menuMob.classList.toggle('header__navigation--active');
+        hiddenMenu.classList.toggle('header__hidden--active');
         burgerAct.classList.toggle('is-active');
     });
 
-    document.addEventListener('click', (event) => {
-        if(!(event.target.closest('.header__button') || event.target.closest('.header__navigation'))) { // дословно: если пользователь кликнул вне меню, то блок закоыть, кроме эл-тов меню и гамбургер меню
-            menuMob.classList.remove('header__navigation--active');
-        }
-    });
+
 
 }
 
