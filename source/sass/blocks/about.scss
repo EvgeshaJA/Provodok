@@ -1,0 +1,30 @@
+.about-us{
+    margin-top: 100px;
+    &__title{
+        font-size: clamp(28px, 5vw, 39px);
+        margin-bottom: 40px;
+    }
+    &__image{
+        width: 80%;
+        margin: 0 auto;
+    }
+    &__content{
+        margin-top: 40px;
+    }
+    &__cont-title{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    &__cont-text:not(:last-of-type){
+        margin-bottom: 30px;
+    }
+
+    @media (max-width:768px){
+        margin-top: 60px;
+    }
+    @media (max-width:450px) {
+        &__cont-title{
+            font-size: 18px;
+        }
+    }
+}

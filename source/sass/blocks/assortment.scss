@@ -1,0 +1,35 @@
+.assortment{
+    &__cards-title{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    &__cards-text{
+        margin-bottom: 20px;
+    }
+
+    &__link{
+        padding-left: 15px;
+        position: relative;
+        margin-left: 15px;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 40%;
+            width: 5px;
+            height: 5px;
+            border-radius: 100%;
+            background-color: $Yellow;
+        }
+    }
+    &__item{
+        .accordion__title{
+            font-size: inherit;
+            font-weight: inherit;
+            color: inherit;
+        }
+    }
+
+
+}
+

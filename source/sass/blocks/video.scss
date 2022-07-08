@@ -1,0 +1,43 @@
+.video{
+    margin-top: 100px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px 0;
+        margin-top: 40px;
+
+    }
+    &__card{
+        width: 48%;
+        box-shadow: $Little;
+
+    }
+    &__card-inner{
+        padding: 10px;
+    }
+
+    &__video{
+        width: 100%;
+        height: 400px;
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__card-title{
+        font-size: 20px;
+        font-weight: $Bold;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    @media (max-width:768px) {
+        margin-top: 60px;
+        &__inner{
+            flex-direction: column;
+        }
+        &__card{
+            width: 100%;
+        }
+    }
+}
